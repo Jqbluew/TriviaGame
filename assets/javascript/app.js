@@ -1,17 +1,47 @@
 
-/*var counter = 0;
 
-function setup() {
+function countDown(secs) {
 
-	var timer = document.getElementById("timer");
-	
-	function timeIt() {
-		counter++;
-		timer.innerHTML("counter");
+var timerButton = document.getElementById("button");
+
+	timerButton.innerHTML = "You have "+secs+" seconds";
+	// if (secs < 1) {
+	// 	clearTimeout(timer);
+	// 	button.innerHTML = "Quiz Completed!"
+	// }
+
+	// secs--;
+	// var timer = setTimeout(countDown, 1000);
+
+}
+
+
+function addListerners() {
+	if (window.addEventListener) {
+		document.getElementById("button").addEventListener("click", btn1func);
 	}
-	setInterval(timeIt, 1000);
-}*/
 
+function btn1func(){
+		//alert("Insert TIMER HERE");
+		countDown(30)
+	var quiz = document.getElementById("results");
+		
+		if (quiz.style.display === "none") {
+			quiz.style.display = "block";
+			} else {
+				quiz.style.display = "block";
+		}
+	}
+}
+window.onload = addListerners;
+
+
+/*var button = document.getElementById('button');
+	('click', buttonClick);
+
+function buttonClick(){
+	console.log("HI");
+};*/
 
 function submitAnswers() {
 	var total = 10;
