@@ -2,17 +2,20 @@
 
 function countDown(secs) {
 
-var timerButton = document.getElementById("button");
+	var timerButton = document.getElementById("button");
 
-	timerButton.innerHTML = "You have "+secs+" seconds";
-	// if (secs < 1) {
-	// 	clearTimeout(timer);
-	// 	button.innerHTML = "Quiz Completed!"
-	// }
+			timerButton.innerHTML = "You have "+secs+" seconds";
+			var timer = setInterval(SubtractSeconds, 1000);
 
-	// secs--;
-	// var timer = setTimeout(countDown, 1000);
+		function SubtractSeconds() {
+			secs--;
+			timerButton.innerHTML = "You have "+secs+" seconds";
 
+			 if (secs < 1) {
+				clearTimeout(timer);
+				button.innerHTML = "Quiz Completed!"
+		}
+	}
 }
 
 
