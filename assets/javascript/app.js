@@ -13,7 +13,7 @@ function countDown(secs) {
 
 			 if (secs < 1) {
 				clearTimeout(timer);
-				button.innerHTML = "Quiz Completed!"
+				timerButton.innerHTML = "Quiz Completed!"
 		}
 	}
 }
