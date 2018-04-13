@@ -1,85 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Game of Thrones Quiz</title>
+	<title>Game of Thrones Trivia</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<script type="text/javascript" src="assets/javascript/app.js"></script>
-	<link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet'>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
 <body>
-	<div id="container">
-		<header>
-			<h1><img src="assets/images/gotlogo.jpg"></h1>
-		</header>
-			<section>
-					 <button class="timer" id="button">START GAME OF THRONES TRIVIA GAME</button>
-						<div id="results" class="hidden">
-							<form name="quizForm" onsubmit="return submitAnswers()">
-								<h3>1. Which of the following is NOT a family in Game of Thrones?</h3>
-								<input type="radio" name="q1" value="a" id="q1a">A. Stark<br>
-								<input type="radio" name="q1" value="b" id="q1b">B. Tyrell<br>
-								<input type="radio" name="q1" value="c" id="q1c">C. Mortensen<br>
-								<input type="radio" name="q1" value="d" id="q1d">D. Bolton<br>
-
-								<h3>2. In the first episode of season 1, who accidentally discovers Queen Cersei's secret?</h3>
-								<input type="radio" name="q2" value="a" id="q2a">A. Arya Stark<br>
-								<input type="radio" name="q2" value="b" id="q2b">B. Bran Stark<br>
-								<input type="radio" name="q2" value="c" id="q2c">C. Joffry Baratheon<br>
-								<input type="radio" name="q2" value="a" id="q2d">D. Tyrion Lannister<br>
-
-								<h3>3. Who is Robb Stark's mother?</h3>
-								<input type="radio" name="q3" value="a" id="q3a">A. Talisa Stark<br>
-								<input type="radio" name="q3" value="b" id="q3b">B. Sansa Stark<br>
-								<input type="radio" name="q3" value="c" id="q3c">C. Arya Stark<br>
-								<input type="radio" name="q3" value="d" id="q3d">D. Catelyn Stark<br>
-
-								<h3>4. What does Tyrion murder his father with?</h3>
-								<input type="radio" name="q4" value="a" id="q4a">A. Poison<br>
-								<input type="radio" name="q4" value="b" id="q4b">B. Crossbow<br>
-								<input type="radio" name="q4" value="c" id="q4c">C. Sword<br>
-								<input type="radio" name="q4" value="d" id="q4d">D. Mace<br>
-
-								<h3>5. Who is known as "The Kingslayer"?</h3>
-								<input type="radio" name="q5" value="a" id="q5a">A. Sandor Clegane<br>
-								<input type="radio" name="q5" value="b" id="q5b">B. Joffrey Baratheon<br>
-								<input type="radio" name="q5" value="c" id="q5c">C. Eddard Stark<br>
-								<input type="radio" name="q5" value="d" id="q5d">D. Jaime Lannister<br>
-
-								<h3>6. Who said "You know nothing Jon Snow"?</h3>
-								<input type="radio" name="q6" value="a" id="q6a">A. Daenerys Targaryen<br>
-								<input type="radio" name="q6" value="b" id="q6b">B. Cersei Lannister<br>
-								<input type="radio" name="q6" value="c" id="q6c">C. Ygritte<br>
-								<input type="radio" name="q6" value="d" id="q6d">D. Podrick Payne<br>
-
-								<h3>7. When did Daenerys receive the dragon eggs?</h3>
-								<input type="radio" name="q7" value="a" id="q7a">A. They were a welcome gift after arriving at the city of Astapor in Slaver's Bay.<br>
-								<input type="radio" name="q7" value="b" id="q7b">B. They were a wedding gift from Magister Illyrio.<br>
-								<input type="radio" name="q7" value="c" id="q7c">C. She found them the first night she traveled with the Dothraki.<br>
-								<input type="radio" name="q7" value="d" id="q7d">D. A scout brought them to her after exploring the Red Waste and trying to find shelter.<br>
-
-								<h3>8. What is Sandor Clegane's nickname?</h3>
-								<input type="radio" name="q8" value="a" id="q8a">A. The Bastard of Bolton<br>
-								<input type="radio" name="q8" value="b" id="q8b">B. The Kingslayer<br>
-								<input type="radio" name="q8" value="c" id="q8c">C. The Hound<br>
-								<input type="radio" name="q8" value="d" id="q8d">D. The Mountain<br>
-
-								<h3>9. Who is the Mother of Dragons?</h3>
-								<input type="radio" name="q9" value="a" id="q9a">A. Arya Stark<br>
-								<input type="radio" name="q9" value="b" id="q9b">B. Daenerys Targaryen<br>
-								<input type="radio" name="q9" value="c" id="q9c">C. Cersei Lannister<br>
-								<input type="radio" name="q9" value="d" id="q9d">D. Brienne of Tarth<br>
-
-								<h3>10. Who rescues Sansa and Theon as they fled through the forests of the North?</h3>
-								<input type="radio" name="q10" value="a" id="q10a">A. Robb Stark<br>
-								<input type="radio" name="q10" value="b" id="q10a">B. The Hound<br>
-								<input type="radio" name="q10" value="c" id="q10a">C. Brienne and Podrick<br>
-								<input type="radio" name="q10" value="d" id="q10a">D. Lord Varys<br>
-								<br><br>
-								<input type="submit" id="submit" name="submit-button" value="Submit Answer">	
-							</form>
-						</div>
-			</section>
+	<div id="wrapper">
+	   	<h1 id="title">Game of Thrones Trivia Game</h1>
+	   	<div id="subwrapper">
+	   			<button id="start">Start</button>
+	   	</div>
 	</div>
+<script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
 </html>
